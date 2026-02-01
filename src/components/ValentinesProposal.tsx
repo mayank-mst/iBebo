@@ -3,8 +3,7 @@ import { Playfair_Display } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Fireworks from "@fireworks-js/react";
 import Image from "next/image";
-
-const basePath = require("../../next.config.ts").basePath || "";
+import { basePath } from "@/lib/constants";
 const playfairDisplay = Playfair_Display({
   display: "swap",
   subsets: ["latin"],
