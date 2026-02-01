@@ -35,7 +35,6 @@ export default function Starfield() {
 
     // generate milky-way stars concentrated along a band
     const milkyStars: { x: number; y: number; r: number; a: number }[] = [];
-    const BAND_CENTER_X = width * 0.6;
     const BAND_ANGLE = -0.5; // radians (slant)
     for (let i = 0; i < STAR_COUNT * 0.8; i++) {
       const t = Math.random();

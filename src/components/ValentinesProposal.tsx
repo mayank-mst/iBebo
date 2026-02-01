@@ -10,46 +10,6 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
 
-// 36 images
-const images = [
-  `${basePath}/game-photos/1.JPG`,
-  `${basePath}/game-photos/2.JPG`,
-  `${basePath}/game-photos/3.JPG`,
-  `${basePath}/game-photos/4.JPG`,
-  `${basePath}/game-photos/5.JPG`,
-  `${basePath}/game-photos/6.JPG`,
-  `${basePath}/game-photos/7.JPG`,
-  `${basePath}/game-photos/8.JPG`,
-  `${basePath}/game-photos/9.JPG`,
-  `${basePath}/game-photos/10.JPG`,
-  `${basePath}/game-photos/11.JPG`,
-  `${basePath}/game-photos/12.JPG`,
-  `${basePath}/game-photos/13.JPG`,
-  `${basePath}/game-photos/14.JPG`,
-  `${basePath}/game-photos/15.JPG`,
-  `${basePath}/game-photos/16.JPG`,
-  `${basePath}/game-photos/17.JPG`,
-  `${basePath}/game-photos/18.JPG`,
-  `${basePath}/game-photos/19.JPG`,
-  `${basePath}/game-photos/20.JPG`,
-  `${basePath}/game-photos/21.JPG`,
-  `${basePath}/game-photos/22.JPG`,
-  `${basePath}/game-photos/23.JPG`,
-  `${basePath}/game-photos/24.JPG`,
-  `${basePath}/game-photos/25.JPG`,
-  `${basePath}/game-photos/26.JPG`,
-  `${basePath}/game-photos/27.JPG`,
-  `${basePath}/game-photos/28.JPG`,
-  `${basePath}/game-photos/29.JPG`,
-  `${basePath}/game-photos/30.JPG`,
-  `${basePath}/game-photos/31.JPG`,
-  `${basePath}/game-photos/32.JPG`,
-  `${basePath}/game-photos/33.JPG`,
-  `${basePath}/game-photos/34.JPG`,
-  `${basePath}/game-photos/35.JPG`,
-  `${basePath}/game-photos/36.JPG`,
-];
-
 export default function ValentinesProposal() {
   const [step, setStep] = useState(0);
   const [position, setPosition] = useState<{
