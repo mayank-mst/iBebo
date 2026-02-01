@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Fireworks from "@fireworks-js/react";
 import Image from "next/image";
 import { basePath } from "@/lib/constants";
+import Starfield from "./Starfield";
 const playfairDisplay = Playfair_Display({
   display: "swap",
   subsets: ["latin"],
@@ -11,42 +12,42 @@ const playfairDisplay = Playfair_Display({
 
 // 36 images
 const images = [
-  `${basePath}/game-photos/1.avif`,
-  `${basePath}/game-photos/2.avif`,
-  `${basePath}/game-photos/3.avif`,
-  `${basePath}/game-photos/4.avif`,
-  `${basePath}/game-photos/5.avif`,
-  `${basePath}/game-photos/6.avif`,
-  `${basePath}/game-photos/7.avif`,
-  `${basePath}/game-photos/8.avif`,
-  `${basePath}/game-photos/9.avif`,
-  `${basePath}/game-photos/10.avif`,
-  `${basePath}/game-photos/11.avif`,
-  `${basePath}/game-photos/12.avif`,
-  `${basePath}/game-photos/13.avif`,
-  `${basePath}/game-photos/14.avif`,
-  `${basePath}/game-photos/15.avif`,
-  `${basePath}/game-photos/16.avif`,
-  `${basePath}/game-photos/17.avif`,
-  `${basePath}/game-photos/18.avif`,
-  `${basePath}/game-photos/19.avif`,
-  `${basePath}/game-photos/20.avif`,
-  `${basePath}/game-photos/21.avif`,
-  `${basePath}/game-photos/22.avif`,
-  `${basePath}/game-photos/23.avif`,
-  `${basePath}/game-photos/24.avif`,
-  `${basePath}/game-photos/25.avif`,
-  `${basePath}/game-photos/26.avif`,
-  `${basePath}/game-photos/27.avif`,
-  `${basePath}/game-photos/28.avif`,
-  `${basePath}/game-photos/29.avif`,
-  `${basePath}/game-photos/30.avif`,
-  `${basePath}/game-photos/31.avif`,
-  `${basePath}/game-photos/32.avif`,
-  `${basePath}/game-photos/33.avif`,
-  `${basePath}/game-photos/34.avif`,
-  `${basePath}/game-photos/35.avif`,
-  `${basePath}/game-photos/36.avif`,
+  `${basePath}/game-photos/1.JPG`,
+  `${basePath}/game-photos/2.JPG`,
+  `${basePath}/game-photos/3.JPG`,
+  `${basePath}/game-photos/4.JPG`,
+  `${basePath}/game-photos/5.JPG`,
+  `${basePath}/game-photos/6.JPG`,
+  `${basePath}/game-photos/7.JPG`,
+  `${basePath}/game-photos/8.JPG`,
+  `${basePath}/game-photos/9.JPG`,
+  `${basePath}/game-photos/10.JPG`,
+  `${basePath}/game-photos/11.JPG`,
+  `${basePath}/game-photos/12.JPG`,
+  `${basePath}/game-photos/13.JPG`,
+  `${basePath}/game-photos/14.JPG`,
+  `${basePath}/game-photos/15.JPG`,
+  `${basePath}/game-photos/16.JPG`,
+  `${basePath}/game-photos/17.JPG`,
+  `${basePath}/game-photos/18.JPG`,
+  `${basePath}/game-photos/19.JPG`,
+  `${basePath}/game-photos/20.JPG`,
+  `${basePath}/game-photos/21.JPG`,
+  `${basePath}/game-photos/22.JPG`,
+  `${basePath}/game-photos/23.JPG`,
+  `${basePath}/game-photos/24.JPG`,
+  `${basePath}/game-photos/25.JPG`,
+  `${basePath}/game-photos/26.JPG`,
+  `${basePath}/game-photos/27.JPG`,
+  `${basePath}/game-photos/28.JPG`,
+  `${basePath}/game-photos/29.JPG`,
+  `${basePath}/game-photos/30.JPG`,
+  `${basePath}/game-photos/31.JPG`,
+  `${basePath}/game-photos/32.JPG`,
+  `${basePath}/game-photos/33.JPG`,
+  `${basePath}/game-photos/34.JPG`,
+  `${basePath}/game-photos/35.JPG`,
+  `${basePath}/game-photos/36.JPG`,
 ];
 
 export default function ValentinesProposal() {
@@ -81,21 +82,8 @@ export default function ValentinesProposal() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full">
-
+      <Starfield />
       <AnimatePresence mode="wait">
-        {/* Image Grid Background */}
-        <div className="absolute inset-0 grid grid-cols-6 opacity-10">
-          {images.slice(0, 36).map((src, index) => (
-            <div key={index} className="relative h-full">
-              <Image
-                src={src}
-                alt={`Memory ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
         {step === 0 && (
           <motion.h2
             key="step-0"
@@ -105,6 +93,18 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            <Fireworks
+              options={{
+                autoresize: true,
+              }}
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
+            />
             Wow, You&apos;re so <span className="text-pink-400">Talented!</span> 🤭🤭
             <br />
             <br />
@@ -230,12 +230,6 @@ export default function ValentinesProposal() {
             >
               So, <span className="text-pink-400">Sakshi Mahajan</span>, will you be my <span className="text-pink-400">Valentine</span>?
             </h2>
-            <Image
-              src={`${basePath}/sad_hamster.png`}
-              alt="Sad Hamster"
-              width={200}
-              height={200}
-            />
             <div className="flex space-x-4 mt-10">
               <button
                 className="px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl hover:from-pink-600 hover:to-rose-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -264,7 +258,8 @@ export default function ValentinesProposal() {
         {step === 10 && (
           <motion.div
             key="step-10"
-            className={`absolute left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl font-bold leading-tight ${playfairDisplay.className}`} transition={{ duration: 1 }}
+            className={`absolute left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl font-bold leading-tight ${playfairDisplay.className}`} 
+            transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
