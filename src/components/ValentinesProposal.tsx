@@ -167,7 +167,7 @@ export default function ValentinesProposal() {
         {step === 3 && (
           <motion.div
             key="step-3"
-            className={`text-4xl font-semibold mb-4 flex flex-col justify-center items-center ${playfairDisplay.className}`}
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
             transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -175,7 +175,7 @@ export default function ValentinesProposal() {
           >
             Thank you for accepting, I love you! 💕            
             <Image
-              src="/hamster_jumping.gif"
+              src={`${basePath}/hamster_jumping.gif`}
               alt="Hamster Feliz"
               width={200}
               height={200}
