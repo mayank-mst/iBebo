@@ -11,20 +11,13 @@ export default function TextFooter() {
     <>
       {/* Left Text */}
       <h1
-        className={`absolute left-10 bottom-5 transform -translate-y-1/2 text-white text-5xl font-bold leading-tight ${playfairDisplay.className}`}
+        className={`absolute left-20 top-12 transform -translate-y-1/2 text-white text-5xl font-bold leading-tight ${playfairDisplay.className}`}
       >
-        <span className="text-prink-400">Bebo, match</span> <br /> the photo pairs
-      </h1>
-
-      {/* Right Text */}
-      <h1
-        className={`absolute right-10 bottom-5 transform -translate-y-1/2 text-white text-5xl font-bold leading-tight text-right ${playfairDisplay.className}`}
-      >
-        to reveal <br /> <span className="text-gray-400">the surprise</span>
+        <span className="text-pink-400">Bebo, match</span> the photo pairs to reveal <span className="text-pink-400">the surprise</span>
       </h1>
 
       {/* Copyright */}
-      <p className="absolute bottom-5 right-5 text-white text-sm opacity-15 hover:opacity-50">
+      <p className="absolute bottom-5 right-5 text-pink-400 text-sm opacity-15 hover:opacity-50">
         © {new Date().getFullYear()}{" "}
         <Link href=""> S🫶M</Link>
       </p>

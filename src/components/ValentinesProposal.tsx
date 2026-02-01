@@ -64,11 +64,11 @@ export default function ValentinesProposal() {
   };
 
   useEffect(() => {
-    if (step < 2) {
+    if (step < 9) {
       // Change step after 5 seconds
       const timer = setTimeout(() => {
         setStep((prevStep) => prevStep + 1);
-      }, 5000);
+      }, 7000);
 
       return () => clearTimeout(timer);
     }
@@ -76,25 +76,26 @@ export default function ValentinesProposal() {
 
   const handleYesClick = () => {
     setShowFireworks(true);
-    setStep(3);
+    setStep(10);
   };
 
   return (
     <div className="flex flex-col items-center justify-center h-full">
+      
       <AnimatePresence mode="wait">
         {/* Image Grid Background */}
-            <div className="absolute inset-0 grid grid-cols-6 opacity-10">
-              {images.slice(0, 36).map((src, index) => (
-                <div key={index} className="relative h-full">
-                  <Image
-                    src={src}
-                    alt={`Memory ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
+        <div className="absolute inset-0 grid grid-cols-6 opacity-10">
+          {images.slice(0, 36).map((src, index) => (
+            <div key={index} className="relative h-full">
+              <Image
+                src={src}
+                alt={`Memory ${index + 1}`}
+                fill
+                className="object-cover"
+              />
             </div>
+          ))}
+        </div>
         {step === 0 && (
           <motion.h2
             key="step-0"
@@ -104,25 +105,121 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Congratulations! You have completed the game. Wow, So Talented 🤭
+            Wow, You&apos;re so <span className="text-pink-400">Talented!</span> 🤭🤭
+            <br />
+            <br />
+            <span className="text-pink-400">Wait wait, stay here don&apos;t go...</span>
           </motion.h2>
         )}
         {step === 1 && (
           <motion.h2
             key="step-1"
             className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
-            transition={{ duration: 3 }}
+            transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            I have a surprise for you!
+            I have a <span className="text-pink-400">surprise</span> for you!
+            <br />
+            <br />
+            Be <span className="text-pink-400">attentive</span>!
           </motion.h2>
         )}
         {step === 2 && (
-          <motion.div
+          <motion.h2
             key="step-2"
-            transition={{ duration: 3 }}
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            Amongst <span className="text-pink-400">trillions and trillions</span> of stars, over <span className="text-pink-400">billions</span> of years
+          </motion.h2>
+        )}
+        {step === 3 && (
+          <motion.h2
+            key="step-3"
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            to be <span className="text-pink-400">alive</span>, and to get to spend this <span className="text-pink-400">life with you</span>
+          </motion.h2>
+        )}
+        {step === 4 && (
+          <motion.h2
+            key="step-4"
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            is so incredibly, <span className="text-pink-400">unfathomably unlikely</span>
+          </motion.h2>
+        )}
+        {step === 5 && (
+          <motion.h2
+            key="step-5"
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            and yet here I am
+            <br />
+            <br />
+            to get the impossible chance to <span className="text-pink-400">get to know you</span>
+          </motion.h2>
+        )}
+        {step === 6 && (
+          <motion.h2
+            key="step-6"
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <span className="text-pink-400">I love you so much Sakshi</span>
+            <br />
+            <br />
+            more than all the time and space in the universe
+          </motion.h2>
+        )}
+        {step === 7 && (
+          <motion.h2
+            key="step-7"
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            and I can't wait to..
+          </motion.h2>
+        )}
+        {step === 8 && (
+          <motion.h2
+            key="step-8"
+            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            spend all the time in the world to share that <span className="text-pink-400">love with you! 😁</span>
+          </motion.h2>
+        )}
+        {step === 9 && (
+          <motion.div
+            key="step-9"
+            transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -131,7 +228,7 @@ export default function ValentinesProposal() {
             <h2
               className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
             >
-              Hey Sakshi, Will you be my Valentine?
+              So, <span className="text-pink-400">Sakshi Mahajan</span>, will you be my <span className="text-pink-400">Valentine</span>?
             </h2>
             <Image
               src={`${basePath}/sad_hamster.png`}
@@ -151,29 +248,28 @@ export default function ValentinesProposal() {
                 style={
                   position
                     ? {
-                        position: "absolute",
-                        top: position.top,
-                        left: position.left,
-                      }
+                      position: "absolute",
+                      top: position.top,
+                      left: position.left,
+                    }
                     : {}
                 }
                 onMouseEnter={() => setPosition(getRandomPosition())}
               >
-                No, I won&apos;t 😢
+                No, I won&apos;t 🖕
               </button>
             </div>
           </motion.div>
         )}
-        {step === 3 && (
+        {step === 10 && (
           <motion.div
-            key="step-3"
-            className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
-            transition={{ duration: 1 }}
+            key="step-10"
+            className={`absolute left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl font-bold leading-tight ${playfairDisplay.className}`} transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Thank you for accepting, I love you! 💕            
+            <span className="text-pink-400">Thank you</span> for playing along, <span className="text-pink-400">Love you!</span> 💕
             <Image
               src={`${basePath}/hamster_jumping.gif`}
               alt="Hamster Feliz"
