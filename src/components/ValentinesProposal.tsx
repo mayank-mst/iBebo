@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Fireworks from "@fireworks-js/react";
 import Image from "next/image";
 
+const basePath = require("../../next.config.ts").basePath || "";
 const playfairDisplay = Playfair_Display({
   display: "swap",
   subsets: ["latin"],
@@ -134,7 +135,7 @@ export default function ValentinesProposal() {
               Hey Sakshi, Will you be my Valentine?
             </h2>
             <Image
-              src="/sad_hamster.png"
+              src={`${basePath}/sad_hamster.png`}
               alt="Sad Hamster"
               width={200}
               height={200}
