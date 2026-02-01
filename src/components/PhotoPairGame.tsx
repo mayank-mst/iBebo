@@ -89,7 +89,7 @@ export default function PhotoPairGame({
     //if (matched.length === imagePairs.length) {
       //handleShowProposal();
     //}
-    if (true) {
+    if (matched.length === imagePairs.length) {
       handleShowProposal();
     }
   }, [matched, handleShowProposal]);
