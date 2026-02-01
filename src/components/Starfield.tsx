@@ -81,7 +81,7 @@ export default function Starfield() {
       // milky-way stars
       ctx.save();
       ctx.globalCompositeOperation = "lighter";
-      for (let s of milkyStars) {
+      for (const s of milkyStars) {
         ctx.beginPath();
         ctx.fillStyle = `rgba(255,255,255,${s.a})`;
         ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
