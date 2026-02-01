@@ -81,7 +81,7 @@ export default function ValentinesProposal() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full">
-      
+
       <AnimatePresence mode="wait">
         {/* Image Grid Background */}
         <div className="absolute inset-0 grid grid-cols-6 opacity-10">
@@ -201,7 +201,7 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            and I can't wait to..
+            and I can&apos;t wait to...
           </motion.h2>
         )}
         {step === 8 && (
