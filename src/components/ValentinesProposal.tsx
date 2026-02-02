@@ -146,7 +146,7 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <span className="text-pink-400">I love you so much Sakshi</span>
+            <span className="text-pink-400">I love you so much S</span>
             <br />
             <br />
             more than all the time and space in the universe
@@ -188,7 +188,7 @@ export default function ValentinesProposal() {
             <h2
               className={`transform -translate-y-1/2 text-white text-5xl font-bold ${playfairDisplay.className}`}
             >
-              So, <span className="text-pink-400">Sakshi Mahajan</span>, will you be my <span className="text-pink-400">Valentine</span>?
+              So, <span className="text-pink-400">S</span>, will you be my <span className="text-pink-400">Valentine</span>?
             </h2>
             <div className="flex space-x-4 mt-10">
               <button
